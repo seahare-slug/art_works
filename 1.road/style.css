@@ -1,7 +1,7 @@
 .moving {
   width: 100%;
-  height: 700px;
-  background: url("./road.jpg") center 0 / 627px repeat-y;
+  height: 100vh;
+  background: url("./road.png") center 0 / 627px repeat-y;
   animation: movebg 4s linear infinite;
 }
 

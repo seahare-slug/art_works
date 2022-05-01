@@ -1,0 +1,62 @@
+:root {
+  --face-size: 200px;
+}
+
+button {
+  margin-left: 80%;
+}
+
+.wrap {
+  background-color: aqua;
+}
+
+#example-element {
+  width: var(--face-size);
+  height: var(--face-size);
+  transform-style: preserve-3d;
+  transform: rotate3d(1, 1, 1, 40deg);
+}
+
+.face {
+  left: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 80px;
+  color: #fff;
+  transition: all 2s;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(var(--face-size));
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(var(--face-size));
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(var(--face-size));
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(var(--face-size));
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(var(--face-size));
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(var(--face-size));
+}

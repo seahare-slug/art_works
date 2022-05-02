@@ -1,5 +1,5 @@
 :root {
-  --face-size: 200px;
+  --face-size: 100px;
 }
 
 button {
@@ -7,18 +7,20 @@ button {
 }
 
 .wrap {
-  background-color: aqua;
+  margin-top: 20%;
+  margin-left: 40%;
+  /* background-color: aqua; */
 }
 
 #example-element {
   width: var(--face-size);
   height: var(--face-size);
-  transform-origin: 20px;
   transform-style: preserve-3d;
 }
 
 .face {
-  left: 800px;
+  left: 100px;
+  top: -100px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -13,12 +13,12 @@ button {
 #example-element {
   width: var(--face-size);
   height: var(--face-size);
+  transform-origin: 20px;
   transform-style: preserve-3d;
-  transform: rotate3d(1, 1, 1, 40deg);
 }
 
 .face {
-  left: 500px;
+  left: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ button {
   backface-visibility: inherit;
   font-size: 80px;
   color: #fff;
-  transition: all 2s;
+  /* transition: all 2s; */
 }
 
 .front {

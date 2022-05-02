@@ -9,7 +9,7 @@ rotateDice();
 function rotateDice() {
   animationFrame = requestAnimationFrame(rotateDice);
 
-  example.style.transform = `rotate3d(1, 1, 1, ${i}deg)`;
+  example.style.transform = `rotate3d(1, 0.2, 0.2, ${i}deg)`;
   i++;
 }
 

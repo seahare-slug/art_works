@@ -24,3 +24,16 @@ function handleAnimationFrame() {
 }
 
 stopBtn.addEventListener("click", handleAnimationFrame);
+
+let diceObj = function (faceLocation, imgLocation) {
+  const newDiv = document.createElement("div");
+  const newImg = document.createElement("img");
+  newDiv.appendChild(newImg);
+  const imgSrc = document.createAttribute("src");
+  imgSrc.value = imgLocation;
+  newImg.setAttributeNode(imgSrc);
+  newDiv.classList.add(faceLocation, "face");
+  example.appendChild(newDiv);
+};
+
+diceObj("front", "./img/dog.jpg");

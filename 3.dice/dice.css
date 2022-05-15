@@ -3,22 +3,22 @@
 }
 
 button {
+  margin-top: 10vh;
   margin-left: 80%;
 }
 
-.wrap {
-  margin-top: 20%;
-  margin-left: 40%;
-  /* background-color: aqua; */
+#wrap1 {
+  margin-top: 20vh;
+  margin-left: 40vw;
 }
 
-#example-element {
+.example-element {
   width: var(--face-size);
   height: var(--face-size);
   transform-style: preserve-3d;
 }
 
-#example-element img {
+.example-element img {
   width: 100%;
   height: 100%;
 }
@@ -35,7 +35,7 @@ button {
   backface-visibility: inherit;
   font-size: 80px;
   color: #fff;
-  /* transition: all 2s; */
+  transition: all 2s;
 }
 
 .front {

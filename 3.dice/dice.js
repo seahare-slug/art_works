@@ -1,6 +1,6 @@
 let numberOfDice = 1;
 
-const exampleElementArray = [document.querySelector(".example-element")];
+const exampleElementArray = [document.querySelector(".dice")];
 
 const imagesSource = [
   "./img/dog.jpg",
@@ -55,7 +55,7 @@ let diceObj = function (faceLocation, imgLocation, appendChildLocation) {
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //최댓값도 포함, 최솟값도 포함
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function makeNewDice() {
@@ -64,11 +64,11 @@ function makeNewDice() {
   numberOfDice += 1;
   newWrap.id = `wrap${numberOfDice}`;
   newWrap.style.position = "absolute";
-  newWrap.style.top = `${getRandomIntInclusive(1, 50)}vh`;
-  newWrap.style.left = `${getRandomIntInclusive(1, 50)}vw`;
+  newWrap.style.top = `${getRandomIntInclusive(10, 90)}vh`;
+  newWrap.style.left = `${getRandomIntInclusive(10, 90)}vw`;
   const newExample = document.createElement("section");
   newWrap.appendChild(newExample);
-  newExample.classList.add("example-element");
+  newExample.classList.add("dice");
   exampleElementArray.push(newExample);
   const appendChildLocation = document.querySelector(
     `#wrap${numberOfDice} > section`

@@ -1,4 +1,4 @@
-const exampleElementArray = [document.querySelector(".dice")];
+const exampleElementArray = [];
 const imagesSource = [
   "./img/dog.jpg",
   "./img/aaron.jpg",
@@ -14,7 +14,7 @@ const stopBtn = document.querySelector("#stop-btn");
 const makeBtn = document.querySelector("#make-btn");
 
 let i = 0;
-let numberOfDice = 1;
+let numberOfDice = 0;
 let animationFrame;
 
 rotateDice();
@@ -41,7 +41,7 @@ stopBtn.addEventListener("click", handleAnimationFrame);
 
 let diceObj = function (faceLocation, imgLocation) {
   const newDiv = document.createElement("div");
-  document.querySelector(`#wrap${numberOfDice} > section`).appendChild(newDiv);
+  document.querySelector(`#dice${numberOfDice} > section`).appendChild(newDiv);
   const newImg = document.createElement("img");
   newDiv.appendChild(newImg);
   const imgSrc = document.createAttribute("src");
@@ -56,27 +56,6 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function makeDice() {
-//   const newWrap = document.createElement("div");
-//   document.body.appendChild(newWrap);
-//   numberOfDice += 1;
-//   newWrap.id = `wrap${numberOfDice}`;
-//   newWrap.style.position = "absolute";
-//   newWrap.style.top = `${getRandomIntInclusive(10, 70)}vh`;
-//   newWrap.style.left = `${getRandomIntInclusive(10, 50)}vw`;
-//   const newExample = document.createElement("section");
-//   newWrap.appendChild(newExample);
-//   newExample.classList.add("dice");
-//   exampleElementArray.push(newExample);
-
-//   diceFace.forEach((face) => {
-//     diceObj(
-//       face,
-//       imagesSource[getRandomIntInclusive(0, imagesSource.length - 1)]
-//     );
-//   });
-// }
-
 class Dice {
   constructor() {
     this.top = `${getRandomIntInclusive(10, 70)}vh`;
@@ -86,13 +65,13 @@ class Dice {
     const newWrap = document.createElement("div");
     document.body.appendChild(newWrap);
     numberOfDice += 1;
-    newWrap.id = `wrap${numberOfDice}`;
+    newWrap.id = `dice${numberOfDice}`;
     newWrap.style.position = "absolute";
     newWrap.style.top = this.top;
     newWrap.style.left = this.left;
     const newExample = document.createElement("section");
     newWrap.appendChild(newExample);
-    newExample.classList.add("dice");
+    newExample.classList.add("wrap");
     exampleElementArray.push(newExample);
 
     diceFace.forEach((face) => {
@@ -103,6 +82,11 @@ class Dice {
     });
   }
 }
+
+const defalutDice = new Dice();
+defalutDice.top = "20vh";
+defalutDice.left = "40vw";
+defalutDice.makeDice();
 
 function handleMakeDice() {
   const dice = new Dice();

@@ -7,19 +7,19 @@ button {
   margin-left: 80%;
 }
 
-#wrap1 {
+/* #dice1 {
   position: absolute;
   top: 20vh;
   left: 40vw;
-}
+} */
 
-.dice {
+.wrap {
   width: var(--face-size);
   height: var(--face-size);
   transform-style: preserve-3d;
 }
 
-.dice img {
+.wrap img {
   width: 100%;
   height: 100%;
 }

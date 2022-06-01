@@ -64,6 +64,6 @@ body {
   background-color: rgba(158, 65, 17, 0.5);
 }
 
-.light-animation:hover {
+.wrap:hover > .light-animation {
   height: 40px;
 }

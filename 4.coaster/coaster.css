@@ -1,25 +1,3 @@
-/* .wrap-coaster {
-  position: relative;
-  left: 30%;
-  top: 300px;
-  background-color: burlywood;
-  width: 500px;
-  height: 250px;
-  border-radius: 400px / 100px;
-  overflow: hidden;
-}
-
-.wrap-coaster::before {
-  content: "";
-  background-color: aqua;
-  position: absolute;
-  left: 30%;
-  top: 300px;
-  width: 500px;
-  height: 250px;
-  border-radius: 400px / 100px;
-} */
-
 body {
   margin: 0;
   padding: 150px 0;
@@ -28,7 +6,7 @@ body {
 .wrap-coaster {
   position: relative;
   left: 30%;
-  top: 0;
+  top: 100px;
   background-color: rgba(158, 65, 17, 0.6);
   width: 150px;
   height: 90px;
@@ -40,13 +18,13 @@ body {
 .wrap-coaster::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -1px;
+  top: -2px;
   width: 150px;
   height: 50px;
   border-radius: 100px / 40px;
   border-style: double;
-  background-color: rgba(158, 65, 17, 0.3);
+  background-color: rgba(158, 65, 17, 0.1);
 }
 
 .wrap-coaster::after {
@@ -61,3 +39,31 @@ body {
   background-color: rgba(158, 65, 17, 0.2);
 }
 
+.light-animation {
+  position: absolute;
+  left: 30%;
+  top: 100px;
+  background-color: rgba(158, 65, 17, 0.2);
+  width: 150px;
+  height: 200px;
+  border-radius: 100px / 30px;
+  border-style: double;
+  overflow: hidden;
+  transition: 1.5s;
+}
+
+.light-animation::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -2px;
+  width: 150px;
+  height: 40px;
+  border-radius: 90px / 20px;
+  border-style: double;
+  background-color: rgba(158, 65, 17, 0.5);
+}
+
+.light-animation:hover {
+  height: 40px;
+}

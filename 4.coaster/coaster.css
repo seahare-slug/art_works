@@ -1,12 +1,31 @@
-body {
+.sauce {
+  margin-top: 0px;
+  width: 170px;
+  height: 170px;
+}
+
+.coaster {
+  display: inline;
+  position: relative;
   margin: 0;
   padding: 150px 0;
 }
 
-.wrap-coaster {
-  position: relative;
-  left: 30%;
-  top: 100px;
+.coaster-animation::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px / 40px;
+  border-style: double;
+  background-color: rgba(158, 65, 17, 0.1);
+}
+
+.coaster-animation {
+  position: absolute;
+  top: 250px;
   background-color: rgba(158, 65, 17, 0.6);
   width: 150px;
   height: 90px;
@@ -15,55 +34,41 @@ body {
   overflow: hidden;
 }
 
-.wrap-coaster::before {
+.coaster-animation::after {
   content: "";
   position: absolute;
-  left: -1px;
-  top: -2px;
+  top: 30px;
   width: 150px;
-  height: 50px;
-  border-radius: 100px / 40px;
-  border-style: double;
-  background-color: rgba(158, 65, 17, 0.1);
-}
-
-.wrap-coaster::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 40px;
-  width: 150px;
-  height: 70px;
+  height: 60px;
   border-radius: 100px / 40px;
   border-style: dotted;
   background-color: rgba(158, 65, 17, 0.2);
 }
 
-.light-animation {
+.curtain-animation::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  border-radius: 100px / 30px;
+  border-style: double;
+  background-color: rgba(158, 65, 17, 0.5);
+}
+
+.curtain-animation {
+  z-index: 10;
   position: absolute;
   left: 30%;
   top: 100px;
   background-color: rgba(158, 65, 17, 0.2);
   width: 150px;
   height: 200px;
-  border-radius: 100px / 30px;
+  border-radius: 120px / 40px;
   border-style: double;
-  overflow: hidden;
   transition: 1.5s;
+  overflow: hidden;
 }
 
-.light-animation::before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: -2px;
-  width: 150px;
-  height: 40px;
-  border-radius: 90px / 20px;
-  border-style: double;
-  background-color: rgba(158, 65, 17, 0.5);
-}
-
-.wrap:hover > .light-animation {
+.coaster:hover > .curtain-animation {
   height: 40px;
 }
